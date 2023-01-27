@@ -1,0 +1,79 @@
+/* 
+  File.strings
+  UpcomingMovies
+
+  Created by Alonso on 11/6/18.
+  Copyright © 2018 Alonso. All rights reserved.
+*/
+
+"upcomingMoviesTabBarTitle" = "Próximos";
+"upcomingMoviesTitle" = "Próximas películas";
+
+"searchMoviesTabBarTitle" = "Buscar";
+"searchMoviesTitle" = "Buscar películas";
+"recentSearches" = "Búsquedas recientes";
+"emptySearchResults" = "No hay resultados que mostrar";
+
+"recentlyVisitedSeearchSectionTitle" = "Visitados recientemente";
+"movieGenresSearchSectionTitle" = "Géneros";
+
+"favoritesTabBarTitle" = "Favoritos";
+"favoritesTitle" = "Mis favoritos";
+
+"accountTabBarTitle" = "Mi cuenta";
+"accountTitle" = "Mi cuenta";
+
+"favoritesCollectionOption" = "Favoritos";
+"watchlistCollectionOption" = "Lista de pendientes";
+"customListGroupOption" = "Listas";
+"recomendedMoviesOption" = "Películas recomendadas";
+"includeAdults" = "Incluir películas para adultos";
+
+"signOutConfirmationTitle" = "¿Estás seguro de que deseas cerrar sesión?";
+"signOut" = "Cerrar sesión";
+
+"emptyMovieResults" = "No hay películas que mostrar.";
+"emptyVideoResults" = "No hay trailers que mostrar.";
+"emptyCreditReults" = "No hay créditos que mostrar.";
+
+"movieDetailTitle" = "Detalle";
+"movieDetailShareActionTitle" = "Comparte esta película";
+"movieDetailShareText" = "Te invito a ver %@";
+"reviewsDetailOptions" = "Reviews";
+"trailersDetailOptions" = "Trailers";
+"creditsDetailOptions" = "Créditos";
+"similarsDetailOptions" = "Similares";
+
+"movieCreditAccessibility" = "%@ como %@";
+
+"addToFavoritesHint" = "Añadir a favoritos";
+"removeFromFavoritesHint" = "Remover de favoritos";
+"addToFavoritesSuccess" = "¡Agregado a tu lista de favoritos!";
+"removeFromFavoritesSuccess" = "Removido de tu lista de favoritos";
+
+"addToWatchlistHint" = "Añadir a lista de seguimiento";
+"removeFromWatchlistHint" = "Remover de lista de seguimiento";
+"addToWatchlistSuccess" = "Agregado a lista de seguimiento";
+"removeFromWatchlistSuccess" = "Removido de tu lista de seguimiento";
+
+"expandMovieCellsHint" = "Expandir películas";
+"collapseMovieCellsHint" = "Colapsar películas";
+
+"topRatedMoviesTitle" = "Películas Top";
+"popularMoviesTitle" = "Películas Populares";
+"similarMoviesTitle" = "Películas Similares";
+
+"cast" = "Reparto";
+"crew" = "Equipo";
+
+"ratingHint" = "Calificación de %.1f";
+
+"cancel" = "Cancelar";
+
+"shareMovieActionSheetItemTitle" = "Compartir película";
+
+"upcomingMoviesSmallWidgetTitle" = "Próximos";
+"upcomingMoviesWidgetDescription" = "Mantente al día con los últimos lanzamientos";
+
+"searchMoviesSmallWidgetTitle" = "Buscar";
+"searchMoviesWidgetDescription" = "Busca tus películas favoritas";
