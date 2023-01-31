@@ -12,6 +12,7 @@ struct ContentView: View {
     
     @State private var buttonWidth: Double = UIScreen.main.bounds.width - 80
     @State private var buttonOffset: CGFloat = 0
+    @State private var isAnimating: Bool = false
     var body: some View {
         
         ZStack {
@@ -24,6 +25,9 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.white)
                 
+                    .opacity(isAnimating ? 1 : 0)
+                    .animation(.linear(duration: 2), value: isAnimating)
+                
                 Text("""
                      Lorem Ipsum Dolor Amet ile bşalayan cümlelere lorem ipsum denir.
                      """)
@@ -32,6 +36,11 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .padding(10)
                 
+                .opacity(isAnimating ? 1 : 0) // ? 1 : 0 ibaresi "Ternary Operator" olarak geçiyor.
+                .offset(y: isAnimating ? 1 : -40)
+                .animation(.easeOut(duration: 2), value: isAnimating)
+                
+                //Buradayaptıklarımız ile header kısmında yer alan bir çok alanı anime etme şansımız oldu.
                 Spacer()
                 //MARK: -CENTER
                 ZStack {
@@ -41,7 +50,8 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 380, height: 380, alignment: .center)
-                    
+                        .opacity(isAnimating ? 1 : 0)
+                        .animation(.easeOut(duration: 1), value: isAnimating)
                     
                     
                 }
@@ -112,9 +122,15 @@ struct ContentView: View {
                 }
                 .frame(width: buttonWidth, height: 80, alignment: .center)
             }
-            
             .padding()
+            .opacity(isAnimating ? 1 : 0)
+            .offset(y: isAnimating ? 0 : -40)
+            .animation(.easeOut(duration: 2), value: isAnimating)
+            
         }
+        .onAppear {
+            isAnimating = true
+        } // Sayfa yüklendi ve görüntüleniyor mu gibi lifecycle için olan aşamalar.
     }
 }
 
