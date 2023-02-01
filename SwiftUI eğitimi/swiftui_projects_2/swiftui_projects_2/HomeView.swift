@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @AppStorage("isonboarding") var isOnboardingViewActive: Bool = true
+    @State private var isAnimating: Bool = false
     
     var body: some View {
         ZStack{
@@ -21,6 +22,13 @@ struct HomeView: View {
                         .scaledToFit()
                         .frame(width: 380, height: 380, alignment: .center)
                         .padding(40)
+                        .offset(y: isAnimating ? -40 : 40)
+                        animation(
+                        Animation
+                            .easeOut(duration: 4)
+                            .repeatForever() // sürekli devam etmesini sağlayacak olan fonksiyon
+                        ,value: isAnimating
+                        )
                 }
                 //MARK: - CENTER
                Text("Lorem Ipsum dolor sit amet agubugu bilmem ne bişeyler")
@@ -33,7 +41,10 @@ struct HomeView: View {
                 //MARK: - FOOTER
                 ZStack{
                     Button(action: {
-                        isOnboardingViewActive = false
+                        withAnimation {
+                            isOnboardingViewActive = false
+                        }
+                        
                     })
                     {
                         ZStack {
@@ -57,6 +68,11 @@ struct HomeView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+                isAnimating = true
+            })
+        })
     }
 }
 

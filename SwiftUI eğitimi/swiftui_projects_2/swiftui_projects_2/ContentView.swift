@@ -106,11 +106,13 @@ struct ContentView: View {
                             }  //gesture için değer her değiştiğinde bize burada bi closure ile fonksiyon yaratacak.
                         }
                         .onEnded({ _ in // drag işlemi bırakıldığı anda offseti 0lıyor
-                            if buttonOffset > buttonWidth / 2 {
-                                buttonOffset = buttonWidth - 80
-                                    isOnboardingViewActive = true
-                            } else {
-                                buttonOffset = 0
+                            withAnimation(Animation.easeOut(duration: 0.4)) { // ekranlar arası geçişleri smoothlaştırmak için aslında bir tık delay verdiğimiz bir animasyon ekledik, bu sayde 0.4 saniye içinde buton ya yerine gidecek ya da 0.4 saniye boyunca hafif soluklaştıktan sonra diğer sayfayı açacak. 
+                                if buttonOffset > buttonWidth / 2 {
+                                    buttonOffset = buttonWidth - 80
+                                        isOnboardingViewActive = true
+                                } else {
+                                    buttonOffset = 0
+                                }
                             }
                         })
                     
